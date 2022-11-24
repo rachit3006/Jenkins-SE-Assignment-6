@@ -12,10 +12,16 @@ pipeline {
                 sh "python3 calculator.py"
             }
         }
-        stage('Test Code') {
+        stage('Test Code (supposed to PASS)') {
             steps {
                 sh "chmod u+x test.py"
                 sh "python3 test.py"
+            }
+        }
+        stage('Test Code (supposed to FAIL)') {
+            steps {
+                sh "chmod u+x test2.py"
+                sh "python3 test2.py"
             }
         }
     } 
