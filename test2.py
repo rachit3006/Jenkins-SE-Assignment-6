@@ -3,7 +3,7 @@ import unittest
 from calculator import div,sqrt
 
 class TestSum(unittest.TestCase):
-  def test_1(self):
+	def test_1(self):
 		x = 10
 		y = 0
 		result = div(x, y)
