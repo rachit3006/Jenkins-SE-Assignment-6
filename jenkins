@@ -1,0 +1,22 @@
+pipeline { 
+    agent any
+    stages {
+        stage('Clone Git') {
+            steps {
+                git 'https://github.com/rachit3006/Jenkins-SE-Assignment-6'
+            }
+        }
+        stage('Build Code') {
+            steps {
+                sh "chmod u+x calculator.py"
+                sh "python3 calculator.py"
+            }
+        }
+        stage('Test Code') {
+            steps {
+                sh "chmod u+x test.py"
+                sh "python3 test.py"
+            }
+        }
+    } 
+}
