@@ -1,6 +1,6 @@
 import unittest
 
-from calculator import add,mul,sub,div
+from calculator import add,mul,sub,div,sqrt
 
 class TestSum(unittest.TestCase):
 	def test_1(self):
@@ -28,10 +28,9 @@ class TestSum(unittest.TestCase):
 		self.assertEqual(result, 0.5)
 
 	def test_5(self):
-		x = 10
-		y = 0
-		result = div(x, y)
-		self.assertEqual(result, "Division by zero not possible !")
+		x = 9
+		result = sqrt(x)
+		self.assertEqual(result, 3.0)
 
 if __name__ == '__main__':
 	unittest.main()
