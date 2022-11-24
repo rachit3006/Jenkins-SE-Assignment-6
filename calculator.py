@@ -17,4 +17,4 @@ def div(x,y):
 def sqrt(x):
     if(x<0):
         return -1 # failure case, square root should not be possible when number is negative. Error should be shown.
-    return math.sqrt(a)
+    return math.sqrt(x)
